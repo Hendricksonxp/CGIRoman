@@ -73,4 +73,18 @@ public class RomanNumeralTest {
         String result = converter.toRoman(20);
         assertEquals("XX", result);
     }
+
+    @Test
+    public void fortyNineConvertToXLIX() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(49);
+        assertEquals("XLIX", result);
+    }
+
+    @Test
+    public void fiftyConvertToL() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(50);
+        assertEquals("L", result);
+    }
 }
