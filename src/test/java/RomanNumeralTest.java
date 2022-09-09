@@ -45,4 +45,11 @@ public class RomanNumeralTest {
         String result = converter.toRoman(6);
         assertEquals("VI", result);
     }
+
+    @Test
+    public void elevenConvertToXI() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(11);
+        assertEquals("XI", result);
+    }
 }
