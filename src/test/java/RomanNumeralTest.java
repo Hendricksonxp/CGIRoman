@@ -110,6 +110,13 @@ public class RomanNumeralTest {
     }
 
     @Test
+    public void nineHundredNinetyNineConvertToCMXCIX() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(999);
+        assertEquals("CMXCIX", result);
+    }
+
+    @Test
     public void oneThousandConvertToM() {
         NumberConverter converter = new NumberConverter();
         String result = converter.toRoman(1000);

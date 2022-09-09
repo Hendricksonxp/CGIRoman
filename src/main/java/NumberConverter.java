@@ -10,7 +10,9 @@ public class NumberConverter {
     public String toRoman(int number) {
         Map<Integer, String> numberToRoman = new LinkedHashMap<>();
         numberToRoman.put(1000, "M");
+        numberToRoman.put(900, "CM");
         numberToRoman.put(500, "D");
+        numberToRoman.put(400, "CD");
         numberToRoman.put(100, "C");
         numberToRoman.put(90, "XC");
         numberToRoman.put(50, "L");
