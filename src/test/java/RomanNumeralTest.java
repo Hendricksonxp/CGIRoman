@@ -59,4 +59,11 @@ public class RomanNumeralTest {
         String result = converter.toRoman(11);
         assertEquals("XI", result);
     }
+
+    @Test
+    public void twentyConvertToXX() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(20);
+        assertEquals("XX", result);
+    }
 }
