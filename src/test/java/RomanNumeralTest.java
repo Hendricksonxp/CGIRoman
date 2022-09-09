@@ -87,4 +87,39 @@ public class RomanNumeralTest {
         String result = converter.toRoman(50);
         assertEquals("L", result);
     }
+
+    @Test
+    public void ninetyConvertToXC() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(90);
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void oneHundredConvertToC() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(100);
+        assertEquals("C", result);
+    }
+
+    @Test
+    public void fiveHundredConvertToD() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(500);
+        assertEquals("D", result);
+    }
+
+    @Test
+    public void oneThousandConvertToM() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(1000);
+        assertEquals("M", result);
+    }
+
+    @Test
+    public void thisYearConvertToMMXXII() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(2022);
+        assertEquals("MMXXII", result);
+    }
 }
