@@ -31,4 +31,18 @@ public class RomanNumeralTest {
         String result = converter.toRoman(3);
         assertEquals("III", result);
     }
+
+    @Test
+    public void fiveConvertToV() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(5);
+        assertEquals("V", result);
+    }
+
+    @Test
+    public void sixConvertToVI() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(6);
+        assertEquals("VI", result);
+    }
 }
