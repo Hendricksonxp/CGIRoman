@@ -8,6 +8,7 @@ public class NumberConverter {
         roman = "";
 
         createRomanString(10, "X");
+        createRomanString(9, "IX");
         createRomanString(5, "V");
         createRomanString(4, "IV");
         createRomanString(1, "I");
