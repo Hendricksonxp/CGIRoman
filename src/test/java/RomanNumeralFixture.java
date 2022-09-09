@@ -5,7 +5,9 @@ public class RomanNumeralFixture {
     public void setArabicNumber(int input){
         ArabicNumber = input;
     }
-    public String RomanNumber(){
-        return "?";
+    public String RomanNumber()
+    {
+        NumberConverter converter = new NumberConverter();
+        return converter.toRoman(ArabicNumber);
     }
 }
