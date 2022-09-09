@@ -1,24 +1,25 @@
 public class NumberConverter {
 
+    String roman;
+    int workingNumber;
+
     public String toRoman(int number) {
-        int workingNumber = number;
-        String roman = "";
+        workingNumber = number;
+        roman = "";
 
-        int currentThreshold = 10;
-        if (workingNumber >= currentThreshold)
-        {
-            roman += "X";
-            workingNumber -= currentThreshold;
-        }
-
-        currentThreshold = 5;
-        if (workingNumber >= currentThreshold)
-        {
-            roman += "V";
-            workingNumber -= currentThreshold;
-        }
+        createRomanString(10, "X");
+        createRomanString(5, "V");
+        createRomanString(4, "IV");
 
         return roman + theIs(new char[workingNumber]);
+    }
+
+    private void createRomanString(int currentThreshold, String currentRoman) {
+        if (workingNumber >= currentThreshold)
+        {
+            roman += currentRoman;
+            workingNumber -= currentThreshold;
+        }
     }
 
     private static String theIs(char[] remainder) {

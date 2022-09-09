@@ -33,6 +33,13 @@ public class RomanNumeralTest {
     }
 
     @Test
+    public void fourConvertToIV() {
+        NumberConverter converter = new NumberConverter();
+        String result = converter.toRoman(4);
+        assertEquals("IV", result);
+    }
+
+    @Test
     public void fiveConvertToV() {
         NumberConverter converter = new NumberConverter();
         String result = converter.toRoman(5);
