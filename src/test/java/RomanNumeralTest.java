@@ -56,10 +56,17 @@ public class RomanNumeralTest {
         ArabicConverter converter = new ArabicConverter();
         String result = converter.convert(10);
         assertEquals("X", result);
-    }@Test
+    }
+    @Test
     public void nineteenConvertsToXIX(){
         ArabicConverter converter = new ArabicConverter();
         String result = converter.convert(19);
         assertEquals("XIX", result);
+    }
+    @Test
+    public void twentyConvertsToXX(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(20);
+        assertEquals("XX", result);
     }
 }
