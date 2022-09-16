@@ -7,7 +7,6 @@ public class RomanNumeralFixture {
     }
     public String RomanNumber()
     {
-        NumberConverter converter = new NumberConverter();
-        return converter.toRoman(ArabicNumber);
+        return "Z";
     }
 }
