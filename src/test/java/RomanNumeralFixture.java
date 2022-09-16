@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 public class RomanNumeralFixture {
 
     public int ArabicNumber;
@@ -5,8 +7,10 @@ public class RomanNumeralFixture {
     public void setArabicNumber(int input){
         ArabicNumber = input;
     }
-    public String RomanNumber()
+
     {
-        return "Z";
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert( ArabicNumber);
+        assertEquals("I", result);
     }
 }

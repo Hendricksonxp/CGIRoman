@@ -11,5 +11,13 @@ public class RomanNumeralTest {
         assertTrue(true);
     }
 
+    @Test
+    public void oneConvertsToI(){
 
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(1);
+        assertEquals("I", result);
+
+
+    }
 }
