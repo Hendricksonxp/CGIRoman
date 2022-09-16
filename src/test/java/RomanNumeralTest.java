@@ -69,4 +69,16 @@ public class RomanNumeralTest {
         String result = converter.convert(20);
         assertEquals("XX", result);
     }
+    @Test
+    public void fortyNineConvertsToXLIX(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(49);
+        assertEquals("XLIX", result);
+    }
+    @Test
+    public void fiftyConvertsToL(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(50);
+        assertEquals("L", result);
+    }
 }
