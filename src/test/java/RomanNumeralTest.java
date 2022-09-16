@@ -46,9 +46,20 @@ public class RomanNumeralTest {
         assertEquals("VI", result);
     }
     @Test
+    public void nineConvertsToIX(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(9);
+        assertEquals("IX", result);
+    }
+    @Test
     public void tenConvertsToX(){
         ArabicConverter converter = new ArabicConverter();
         String result = converter.convert(10);
         assertEquals("X", result);
+    }@Test
+    public void nineteenConvertsToXIX(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(19);
+        assertEquals("XIX", result);
     }
 }
