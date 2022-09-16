@@ -28,6 +28,12 @@ public class RomanNumeralTest {
         assertEquals("III", result);
     }
     @Test
+    public void fourConvertsToIV(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(4);
+        assertEquals("IV", result);
+    }
+    @Test
     public void fiveConvertsToV(){
         ArabicConverter converter = new ArabicConverter();
         String result = converter.convert(5);
@@ -38,5 +44,11 @@ public class RomanNumeralTest {
         ArabicConverter converter = new ArabicConverter();
         String result = converter.convert(6);
         assertEquals("VI", result);
+    }
+    @Test
+    public void tenConvertsToX(){
+        ArabicConverter converter = new ArabicConverter();
+        String result = converter.convert(10);
+        assertEquals("X", result);
     }
 }
