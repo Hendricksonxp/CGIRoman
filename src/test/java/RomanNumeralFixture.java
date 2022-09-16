@@ -8,9 +8,9 @@ public class RomanNumeralFixture {
         ArabicNumber = input;
     }
 
-    {
+    public String RomanNumber() {
         ArabicConverter converter = new ArabicConverter();
-        String result = converter.convert( ArabicNumber);
-        assertEquals("I", result);
+        return converter.convert(ArabicNumber);
     }
+
 }
