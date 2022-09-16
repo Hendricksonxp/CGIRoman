@@ -4,19 +4,19 @@ public class ArabicConverter {
     public String convert(int arabicNumber) {
         workingArabic = arabicNumber;
         String romanNumber = "";
-        romanNumber = processArabic(10, romanNumber, "X");
-        romanNumber = processArabic(9, romanNumber, "IX");
-        romanNumber = processArabic(5, romanNumber, "V");
-        romanNumber = processArabic(4, romanNumber, "IV");
-
-        for (int i = 0; i < workingArabic ; i++) {
-            romanNumber = romanNumber + "I";
+        while (workingArabic > 0) {
+            romanNumber = processArabic(10, romanNumber, "X");
+            romanNumber = processArabic(9, romanNumber, "IX");
+            romanNumber = processArabic(5, romanNumber, "V");
+            romanNumber = processArabic(4, romanNumber, "IV");
+            romanNumber = processArabic(1, romanNumber, "I");
         }
         return romanNumber;
     }
 
     private String processArabic(int arabicNumber, String result, String romanNumber) {
-        if(workingArabic >= arabicNumber) {
+
+        if (workingArabic >= arabicNumber) {
             result += romanNumber;
             workingArabic -= arabicNumber;
         }
