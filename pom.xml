@@ -72,6 +72,11 @@
       <artifactId>cucumber-reporting</artifactId>
       <version>3.8.0</version>
     </dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-base</artifactId>
+          <version>18.0.1</version>
+      </dependency>
   </dependencies>
   <dependencyManagement>
     <dependencies>

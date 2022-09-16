@@ -1,17 +1,29 @@
+import javafx.util.Pair;
+
 public class ArabicConverter {
+
+    public ArabicConverter(){
+        conversionTable[0] = new Pair<Integer, String>(50, "L");
+        conversionTable[1] = new Pair<Integer, String>(40, "XL");
+        conversionTable[2] = new Pair<Integer, String>(10, "X");
+        conversionTable[3] = new Pair<Integer, String>(9, "IX");
+        conversionTable[4] = new Pair<Integer, String>(5, "V");
+        conversionTable[5] = new Pair<Integer, String>(4, "IV");
+        conversionTable[6] = new Pair<Integer, String>(1, "I");
+    }
     private int workingArabic;
+    private Pair conversionTable[ ]= new Pair[7];
 
     public String convert(int arabicNumber) {
         workingArabic = arabicNumber;
         String romanNumber = "";
 
-        romanNumber = processArabic(50, romanNumber, "L");
-        romanNumber = processArabic(40, romanNumber, "XL");
-        romanNumber = processArabic(10, romanNumber, "X");
-        romanNumber = processArabic(9, romanNumber, "IX");
-        romanNumber = processArabic(5, romanNumber, "V");
-        romanNumber = processArabic(4, romanNumber, "IV");
-        romanNumber = processArabic(1, romanNumber, "I");
+        for (Pair pair:conversionTable
+             ) {
+            int arabic = (int) pair.getKey();
+            romanNumber = processArabic(arabic, romanNumber, (String) pair.getValue());
+
+        }
 
         return romanNumber;
     }
