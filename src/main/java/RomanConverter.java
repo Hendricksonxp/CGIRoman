@@ -1,18 +1,19 @@
+import javafx.util.Pair;
+
 public class RomanConverter {
     public static String convert(int numberToConvert) {
+        int leftover = numberToConvert;
         String result = "";
-        String romanValue = "";
-        int arabicValue = 0;
-        if (numberToConvert >= 10){
-            romanValue = "X";
-            arabicValue = 10;
-        }
-        else if (numberToConvert >= 1){
-            romanValue = "I";
-            arabicValue = 1;
-        }
-        for (int i = 0; i < numberToConvert; i+= arabicValue) {
-            result += romanValue;
+        Pair translations[] = new Pair[2];
+        translations[0] = new Pair<Integer, String > (10, "X");
+        translations[1] = new Pair<Integer, String > (1, "I");
+
+        for (Pair pair:translations
+             ) {
+            while (leftover >= (int) pair.getKey()) {
+                result += pair.getValue();
+                leftover -= (int)pair.getKey();
+            }
         }
         return result;
     }
