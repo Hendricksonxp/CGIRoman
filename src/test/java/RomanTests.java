@@ -12,12 +12,13 @@ public class RomanTests {
 
     @Test
     public void oneConvertsToI(){
-        //arrange
-
-        //act
         String result = RomanConverter.convert(1);
-
-        //assert
         assertEquals("I", result);
+    }
+
+    @Test
+    public void twoConvertsToII(){
+        String result = RomanConverter.convert(2);
+        assertEquals("II", result);
     }
 }
