@@ -39,4 +39,10 @@ public class RomanTests {
         String result = RomanConverter.convert(20);
         assertEquals("XX", result);
     }
+
+    @Test
+    public void twentyoneConvertsToXXI(){
+        String result = RomanConverter.convert(21);
+        assertEquals("XXI", result);
+    }
 }
