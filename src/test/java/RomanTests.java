@@ -21,4 +21,22 @@ public class RomanTests {
         String result = RomanConverter.convert(2);
         assertEquals("II", result);
     }
+
+    @Test
+    public void threeConvertsToIII(){
+        String result = RomanConverter.convert(3);
+        assertEquals("III", result);
+    }
+
+    @Test
+    public void tenConvertsToX(){
+        String result = RomanConverter.convert(10);
+        assertEquals("X", result);
+    }
+
+    @Test
+    public void twentyConvertsToXX(){
+        String result = RomanConverter.convert(20);
+        assertEquals("XX", result);
+    }
 }
