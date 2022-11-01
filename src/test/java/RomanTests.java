@@ -29,6 +29,18 @@ public class RomanTests {
     }
 
     @Test
+    public void fourConvertsToIV(){
+        String result = RomanConverter.convert(4);
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void fiveConvertsToV(){
+        String result = RomanConverter.convert(5);
+        assertEquals("V", result);
+    }
+
+    @Test
     public void tenConvertsToX(){
         String result = RomanConverter.convert(10);
         assertEquals("X", result);
@@ -44,5 +56,15 @@ public class RomanTests {
     public void twentyoneConvertsToXXI(){
         String result = RomanConverter.convert(21);
         assertEquals("XXI", result);
+    }
+    @Test
+    public void thirtySevenConvertsToXXXVII(){
+        String result = RomanConverter.convert(37);
+        assertEquals("XXXVII", result);
+    }
+    @Test
+    public void twentyTwentyTwo(){
+        String result = RomanConverter.convert(2022);
+        assertEquals("MMXXII", result);
     }
 }
