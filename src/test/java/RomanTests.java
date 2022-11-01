@@ -1,4 +1,8 @@
+import javafx.util.Pair;
 import org.junit.jupiter.api.Test;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -66,5 +70,27 @@ public class RomanTests {
     public void twentyTwentyTwo(){
         String result = RomanConverter.convert(2022);
         assertEquals("MMXXII", result);
+    }
+
+    @Test
+    public void linedHashMapExploration(){
+
+        int leftover = 37;
+        String result = "";
+        LinkedHashMap<Integer, String> translations = new LinkedHashMap<Integer, String>();
+        translations.put(1000, "M");
+        translations.put(10, "X");
+        translations.put(5, "V");
+        translations.put(4, "IV");
+        translations.put(1, "I");
+        
+        for (Map.Entry<Integer, String> entry:translations.entrySet()
+             ) {
+            while (leftover >= (int) entry.getKey()) {
+                result += entry.getValue();
+                leftover -= (int)entry.getKey();
+            }
+        }
+            assertEquals("XXXVII", result);
     }
 }
