@@ -1,19 +1,28 @@
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class RomanConversion {
     public static String convert(int arabicNumber) {
+
+        LinkedHashMap<Integer, String> conversionTable = new LinkedHashMap<Integer, String>();
+        conversionTable.put(10,"X");
+        conversionTable.put(5, "V");
+        conversionTable.put(4, "IV");
+        conversionTable.put(1, "I");
+
         int remainder = arabicNumber;
-        String roman = "";
+        String romanResult = "";
 
-        while (remainder >= 10){
-            roman += "X";
-            remainder -= 10;
+        for (Map.Entry<Integer, String> entry:conversionTable.entrySet()) {
+            int arabic = (int) entry.getKey();
+            String roman = entry.getValue();
+;            while (remainder >= arabic){
+                romanResult += roman;
+                remainder -= arabic;
+            }
         }
 
-        while (remainder >= 1){
-            roman += "I";
-            remainder -= 1;
-        }
-
-        return roman;
+        return romanResult;
     }
 }
 

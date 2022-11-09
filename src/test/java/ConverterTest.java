@@ -24,6 +24,18 @@ public class ConverterTest {
     }
 
     @Test
+    public void fourConvertsToIV(){
+        String roman = RomanConversion.convert(4);
+        assertEquals("IV",roman);
+    }
+
+    @Test
+    public void fiveConvertsToV(){
+        String roman = RomanConversion.convert(5);
+        assertEquals("V",roman);
+    }
+
+    @Test
     public void tenConvertsToX(){
         String roman = RomanConversion.convert(10);
         assertEquals("X",roman);
