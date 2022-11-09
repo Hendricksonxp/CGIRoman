@@ -11,8 +11,14 @@ public class ConverterTest {
     }
 
     @Test
-    public void OneConvertsToI(){
+    public void oneConvertsToI(){
         String roman = RomanConversion.convert(1);
         assertEquals("I",roman);
+    }
+
+    @Test
+    public void threeConvertsToIII(){
+        String roman = RomanConversion.convert(3);
+        assertEquals("III",roman);
     }
 }
