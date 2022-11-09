@@ -28,4 +28,11 @@ public class ConverterTest {
         String roman = RomanConversion.convert(10);
         assertEquals("X",roman);
     }
+
+
+    @Test
+    public void twentyThreeConvertsToXXIII(){
+        String roman = RomanConversion.convert(23);
+        assertEquals("XXIII",roman);
+    }
 }
