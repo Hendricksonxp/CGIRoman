@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,5 +21,12 @@ public class ConverterTest {
     public void threeConvertsToIII(){
         String roman = RomanConversion.convert(3);
         assertEquals("III",roman);
+    }
+
+    @Disabled
+    @Test
+    public void tenConvertsToX(){
+        String roman = RomanConversion.convert(10);
+        assertEquals("X",roman);
     }
 }
