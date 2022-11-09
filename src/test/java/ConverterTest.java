@@ -23,7 +23,6 @@ public class ConverterTest {
         assertEquals("III",roman);
     }
 
-    @Disabled
     @Test
     public void tenConvertsToX(){
         String roman = RomanConversion.convert(10);
