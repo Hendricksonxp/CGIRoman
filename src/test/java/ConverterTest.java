@@ -36,6 +36,12 @@ public class ConverterTest {
     }
 
     @Test
+    public void nineConvertsToIX(){
+        String roman = RomanConversion.convert(9);
+        assertEquals("IX",roman);
+    }
+
+    @Test
     public void tenConvertsToX(){
         String roman = RomanConversion.convert(10);
         assertEquals("X",roman);
@@ -46,5 +52,11 @@ public class ConverterTest {
     public void twentyThreeConvertsToXXIII(){
         String roman = RomanConversion.convert(23);
         assertEquals("XXIII",roman);
+    }
+
+    @Test
+    public void seventeenFiftyFive(){
+        String roman = RomanConversion.convert(1755);
+        assertEquals("MDCCLV",roman);
     }
 }

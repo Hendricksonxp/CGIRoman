@@ -5,7 +5,12 @@ public class RomanConversion {
     public static String convert(int arabicNumber) {
 
         LinkedHashMap<Integer, String> conversionTable = new LinkedHashMap<Integer, String>();
+        conversionTable.put(1000,"M");
+        conversionTable.put(500,"D");
+        conversionTable.put(100,"C");
+        conversionTable.put(50,"L");
         conversionTable.put(10,"X");
+        conversionTable.put(9,"IX");
         conversionTable.put(5, "V");
         conversionTable.put(4, "IV");
         conversionTable.put(1, "I");
