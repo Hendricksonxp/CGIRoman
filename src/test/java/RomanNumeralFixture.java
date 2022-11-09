@@ -1,13 +1,12 @@
 public class RomanNumeralFixture {
 
-    public int ArabicNumber;
+    public int arabicNumber;
 
     public void setArabicNumber(int input){
-        ArabicNumber = input;
+        arabicNumber = input;
     }
 
     public String RomanNumber() {
-        return "Unknown";
-        //return RomanConverter.convert(ArabicNumber);
+        return RomanConversion.convert(arabicNumber);
     }
 }
