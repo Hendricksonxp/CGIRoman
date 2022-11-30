@@ -7,8 +7,7 @@ public class RomanNumeralFixture {
     }
 
     public String RomanNumber() {
-        return "ZZYZZ";
-//        return RomanConversion.convert(arabicNumber);
+        return ArabicToRomanConverter.convertToRoman(arabicNumber);
     }
 
 
