@@ -7,6 +7,10 @@ public class ArabicToRomanConverter {
         StringBuilder result = new StringBuilder();
         int number = arabicNumber;
         LinkedHashMap<Integer, String> conversionMap = new LinkedHashMap<>();
+        conversionMap.put(100, "C");
+        conversionMap.put(90, "XC");
+        conversionMap.put(50, "L");
+        conversionMap.put(40, "XL");
         conversionMap.put(10, "X");
         conversionMap.put(9, "IX");
         conversionMap.put(5, "V");
